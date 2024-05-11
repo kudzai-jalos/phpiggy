@@ -17,9 +17,7 @@ class Router {
     }
 
     private function normilizePath(string $path): string {
-        $path = trim($path, "/");
         $path = "/{$path}/";;
-
         $path = preg_replace("#[/]{2,5}#","/",$path);
         
         return $path;
